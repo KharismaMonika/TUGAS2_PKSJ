@@ -8,9 +8,11 @@ ___
 
 ## PENDAHULUAN
 ### LATAR BELAKANG
+SQL Injection merupakan sebuah topik yang sedang hangat diperbincangkan diera perkembangan teknologi saat ini. Hal ini dikarenakan dengan metode ini kita bisa mengetahui informasi penting didalam sebuah sistem yang seharusnya tidak boleh kita ketahui. Untuk mengetahui cara kerja dari sql injection, kami mencoba melakukan simulasi sql injection pada wordpress dengan menggunakan ubuntu.
 ### TUJUAN
+Memenuhi Tugas 2 dari Mata Kuliah Perancangan Keamanan Sistem dan Jaringan
 ### MANFAAT
-
+Mengetahui cara kerja SQL Injection dan cara untuk mencegahnya
 ___
 
 ## DASAR TEORI
@@ -159,7 +161,8 @@ ___
 1. Sebelum menginstall plugin pada wordpress, ubah hak milik folder wp-content pada wordpress dengan mengetikkan: sudo chown -R :www-data wp-content
 2. kemudian ubahlah ukuran upload maks pada php.ini agar bisa menginstall plugin yang berukuran lebih dari 2MB.
 3. jika sudah, pada halaman utama wordpress sebelah kiri, pilih plugin->new plugin
-4. 
+4. kemudian cari plugin league manager dan spider web player. jika sudah unduh kedua plugin tersebut.
+5. setelah terunduh, upload kedua plugin tersebut untuk diinstall.
 * ### Instalasi SQLmap
 * ### Instalasi WPscan
 ___
