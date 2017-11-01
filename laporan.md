@@ -143,7 +143,23 @@ ___
 29. Pilih continue, instalasi telah selesai
 * ### Instalasi Wordpress
 1. Sebelum menginstall wordpress, anda harus menginstall MySQL server dan apache terlebih dahulu
-2. Apabila sudah, install wordpress dengan mengetikkan perintah sudo apt-get install wordpress
+2. Apabila sudah, install wordpress dengan mengetikkan perintah: sudo apt-get install wordpress
+3. Kemudian masuklah kedalam mysql dengan mengetikkan perintah: mysql -u root -p, kemudian masukkan passwordnya
+4. Jika sudah masuk ke mysql, buatlah database baru dengan perintah: CREATE DATABASE "NAMA_DATABASE";
+5. Kalau database telah dibuat, ganti konfigurasi apache agar bisa mengakses wordpress. Buatlah file konfigurasi baru di /etc/apache2/sites-available dengan nama wordpress.conf
+6. Lalu isi file wordpress.conf sesuai dengan gambar berikut. kalau sudah, simpan file konfigurasi tersebut.
+7. Ketikkan perintah: sudo a2ensite wordpress untuk mengaktifkan konfigurasi. kemudian restart apache dengan mengetikkan systemctl restart apache2.service
+8. Setelah membuat konfigurasi apache, sekarang kita membuat konfigurasi untuk database wordpressnya. masuklah pada folder wordpress, kemudian buatlah file konfigurasi dengan format penamaannya: [ip_virtual_box]-config.php
+9. Isi file konfigurasi sebagai berikut. kalau sudah, simpan file konfigurasi lalu restart apache kembali.
+10. Untuk mengecek konfigurasi, bukalah browser pada laptop anda, kemudian masukkan alamat sebagai berikut: ip/blog/wp-content
+11. Apabila konfigurasi tadi benar, maka anda akan masuk kedalam halaman utama konfigurasi wordpress. apabila anda sudah masuk, isi konfigurasi sesuai keinginan anda.
+12. Jika anda telah men-setting konfigurasi wordpress, lakukan login dengan username dan password sesuai konfigurasi yang anda lakukan barusan.
+13. Jika login anda benar, maka anda akan masuk kedalam halaman utama wordpress sebagai admin.
+* ### Instalasi Plugin
+1. Sebelum menginstall plugin pada wordpress, ubah hak milik folder wp-content pada wordpress dengan mengetikkan: sudo chown -R :www-data wp-content
+2. kemudian ubahlah ukuran upload maks pada php.ini agar bisa menginstall plugin yang berukuran lebih dari 2MB.
+3. jika sudah, pada halaman utama wordpress sebelah kiri, pilih plugin->new plugin
+4. 
 * ### Instalasi SQLmap
 * ### Instalasi WPscan
 ___
