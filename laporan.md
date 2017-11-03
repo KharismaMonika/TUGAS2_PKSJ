@@ -113,6 +113,7 @@ ___
  28.	Pilih layout keyboard yang sesuai dengan keyboard anda, lalu klik “Continue”.
  29.	Isikan detail user yang akan digunakan pertama kali, lalu klik “Continue”.
  30.	Silakan tunggu sampai proses instalasi selesai.
+ 
 * ### Instalasi Kali Linux
 1.	Download Kali Linux pada https://www.kali.org/downloads
  2.	Buat Virtual Machine yang baru, Isikan Nama virtual machine, type : Linux, Version : Debian 64/32-bit, isikan jumlah alokasi memory pada contoh ini sebesar 1 GB / 1024 MB
@@ -143,6 +144,7 @@ ___
 27. Tunggu hingga proses selesai, dan muncul dialog instalasi GRUB, pilih yes lalu continue
 28. Pilih device, lalu continue, tunggu hingga proses selesai
 29. Pilih continue, instalasi telah selesai
+
 * ### Instalasi Wordpress
 1. Sebelum menginstall wordpress, anda harus menginstall MySQL server dan apache terlebih dahulu
 2. Apabila sudah, install wordpress dengan mengetikkan perintah: sudo apt-get install wordpress
@@ -163,8 +165,22 @@ ___
 3. jika sudah, pada halaman utama wordpress sebelah kiri, pilih plugin->new plugin
 4. kemudian cari plugin league manager dan spider web player. jika sudah unduh kedua plugin tersebut.
 5. setelah terunduh, upload kedua plugin tersebut untuk diinstall.
+
 * ### Instalasi SQLmap
+ Pada kali linux, sqlmap merupakan aplikasi bawaan. Sedangkan pada ubuntu harus dilakukan proses instalasi sebagai berikut:
+ 1. Ketikkan perintah pada terminal sudo apt-get update
+ 2. Masukkan password
+ 3. Ketikkan perintah pada terminal sudo apt-get install sqlmap
+ 
 * ### Instalasi WPscan
+
+ Pada kali linux, WPScan merupakan aplikasi bawaan. Sedangkan pada ubuntu harus dilakukan proses instalasi sebagai berikut:
+ 1. Ketikkan perintah pada terminal apt-get install git
+ 2. Ketikkan perintah pada terminal sudo apt-get install libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
+ 3. Ketikkan perintah pada terminal git clone https://github.com/wpscanteam/wpscan.git
+ 4. Ketikkan perintah pada terminal cd wpscan
+ 5. Ketikkan perintah pada terminal sudo gem install bundler && bundle install --without test development
+ 6. Ketikkan perintah pada terminal ruby wpscan.rb
 ___
 
 ## HASIL UJI COBA
