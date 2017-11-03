@@ -186,6 +186,7 @@ ___
 ## HASIL UJI COBA
 * ### PENGUJIAN DENGAN SQLmap 
  1. Untuk mengetahui parameter yang vunerable dengan perintah, sqlmap --url="http://192.168.56.102/?match=1" --level 5 --risk 3 --dbms mysql 
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/vulnrable%20param.JPG "Vunerable Parameter")
  
  
 * ### PENGUJIAN DENGAN WPScan
