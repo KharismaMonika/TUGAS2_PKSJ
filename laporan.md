@@ -184,7 +184,12 @@ ___
 ___
 
 ## HASIL UJI COBA
-* ### UJI COBA 1 : 
+* ### PENGUJIAN DENGAN SQLmap 
+ 1. Untuk mengetahui parameter yang vunerable dengan perintah, sqlmap --url="http://192.168.56.102/?match=1" --level 5 --risk 3 --dbms mysql 
+ 
+ 
+* ### PENGUJIAN DENGAN WPScan
+
 ___
 
 ## PENUTUP
