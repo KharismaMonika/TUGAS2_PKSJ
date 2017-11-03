@@ -190,6 +190,9 @@ ___
  
  
 * ### PENGUJIAN DENGAN WPScan
+ 1. Menemukan user dengan mengetikkan perintah wpscan -u 192.168.56.102 -e -u
+ ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan1.JPG "User")
+ 
 
 ___
 
