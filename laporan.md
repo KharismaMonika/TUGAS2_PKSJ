@@ -219,9 +219,16 @@ Hasilnya
 Hasilnya
   ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/sqlmap12.JPG "Coulmn list") 
 
-
-
 ___
 
 ## PENUTUP
+
+*### KESIMPULAN
+1. Kali Linux diperlengkapi dengan tools (wpscan maupun sqlmap yang berguna untuk mengecek keamanan sebuah sistem
+2. Wpscan dapat digunakan untuk mengetahui plugin apa yang dapat ditembus oleh sql injection pada wordpress.
+3. Sqlmap diperlengkapi syntax-syntax untuk mengakses database dengan url parameter yang vulnerable, bahkan dapat digunakan untuk mencuri password pada komputer server
+
+*### SARAN
+1. Pengguna wordpress/website tertentu harus sering melakukan update agar plugin yang dipasang adalah plugin yang sudah aman dari serangan
+2. Dalam membuat parameter pada web, harus dilakukan pemeriksaan apakah input yang diberikan user berupa syntax / perintah query yang seharusnya tidak boleh diisikan.
 
