@@ -152,16 +152,22 @@ ___
 4. Jika sudah masuk ke mysql, buatlah database baru dengan perintah: CREATE DATABASE "NAMA_DATABASE";
 5. Kalau database telah dibuat, ganti konfigurasi apache agar bisa mengakses wordpress. Buatlah file konfigurasi baru di /etc/apache2/sites-available dengan nama wordpress.conf
 6. Lalu isi file wordpress.conf sesuai dengan gambar berikut. kalau sudah, simpan file konfigurasi tersebut.
+![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wconf1.JPG "wordpress.conf")
 7. Ketikkan perintah: sudo a2ensite wordpress untuk mengaktifkan konfigurasi. kemudian restart apache dengan mengetikkan systemctl restart apache2.service
 8. Setelah membuat konfigurasi apache, sekarang kita membuat konfigurasi untuk database wordpressnya. masuklah pada folder wordpress, kemudian buatlah file konfigurasi dengan format penamaannya: [ip_virtual_box]-config.php
 9. Isi file konfigurasi sebagai berikut. kalau sudah, simpan file konfigurasi lalu restart apache kembali.
-10. Untuk mengecek konfigurasi, bukalah browser pada laptop anda, kemudian masukkan alamat sebagai berikut: ip/blog/wp-content
+![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/mysql3.JPG "wordpress.conf")
+10. Untuk mengecek konfigurasi, bukalah browser pada laptop anda, kemudian masukkan alamat sebagai berikut: ip/blog/wp-admin/install.php
 11. Apabila konfigurasi tadi benar, maka anda akan masuk kedalam halaman utama konfigurasi wordpress. apabila anda sudah masuk, isi konfigurasi sesuai keinginan anda.
+![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wordpress1.JPG "wordpress1.conf")
 12. Jika anda telah men-setting konfigurasi wordpress, lakukan login dengan username dan password sesuai konfigurasi yang anda lakukan barusan.
 13. Jika login anda benar, maka anda akan masuk kedalam halaman utama wordpress sebagai admin.
+![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wordpress3.JPG "wordpress3.conf")
 * ### Instalasi Plugin
 1. Sebelum menginstall plugin pada wordpress, ubah hak milik folder wp-content pada wordpress dengan mengetikkan: sudo chown -R :www-data wp-content
+![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wp_privillages.JPG "wordpress.conf")
 2. kemudian ubahlah ukuran upload maks pada php.ini agar bisa menginstall plugin yang berukuran lebih dari 2MB.
+![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/upload error1.JPG "upload")
 3. jika sudah, pada halaman utama wordpress sebelah kiri, pilih plugin->new plugin
 4. kemudian cari plugin league manager dan spider web player. jika sudah unduh kedua plugin tersebut.
 5. setelah terunduh, upload kedua plugin tersebut untuk diinstall.
