@@ -184,28 +184,15 @@ ___
 ___
 
 ## HASIL UJI COBA
-
+* ### PENGUJIAN DENGAN SQLmap 
+ 1. Untuk mengetahui parameter yang vunerable dengan perintah, sqlmap --url="http://192.168.56.102/?match=1" --level 5 --risk 3 --dbms mysql 
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/vulnrable%20param.JPG "Vunerable Parameter")
+ 
+ 
 * ### PENGUJIAN DENGAN WPScan
  1. Menemukan user dengan mengetikkan perintah wpscan -u 192.168.56.102 -e -u
  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan1.JPG "User")
-
- 2. Melakukan bruteforce password user dengan mengetikkan perintah wpscan -u 192.168.56.102 --wordlist /usr/share/wordlist/nmap.lst --username user
- ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan2.JPG "User Password")
-
- 3. Menemukan vulnerable plugin dengan mengetikkan perintah wpscan -u 192.168.56.102 -e -vp
-
- ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan3.JPG "LeagueManager")
- ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan3.JPG "VideoPlayer")
-
-* ### PENGUJIAN DENGAN SQLmap 
- 1. Untuk mengetahui parameter yang vunerable dengan perintah, sqlmap --url="http://192.168.56.102/wordpress/wp-admin/admin.php/?page=leaguemanager&subpage=show-league&league_id=1" --level 5 --risk 3 --dbms mysql 
-
-  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/vulnrable%20param.JPG "Vunerable Parameter") 
-
- 1. Untuk menampilkan, sqlmap --url="http://192.168.56.102/?match=1" --level 5 --risk 3 --dbms mysql 
-  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/vulnrable%20param.JPG "Vunerable Parameter") 
-
-
+ 
 
 ___
 
